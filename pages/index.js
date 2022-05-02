@@ -1,34 +1,74 @@
 import Head from 'next/head'
-import Script from 'next/script'
-import Navbar from './components/Navbar'
+
 
 export default function Home() {
-    return (
-    <>
+    return (<>
       <Head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> |Pin Trash</title>
-    <Script defer src="assets/js/alpine.min.js"></Script>
 </Head>
 
-<Navbar/>
-{/* ====== Navbar Section End */}
+
+<div class="navbar bg-base-100">
+  <div className="navbar-start flex-1">
+       
+        <a className="normal-case text-xl w-20">
+          <img src="/assets/Pin Trash.png" alt="icon" /></a>
+      </div>
+
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal p-0">
+          <li><a>About</a></li>
+          <li tabIndex={0}>
+            <a>
+              Pickup Trash
+            </a>
+          </li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+ 
+  
+  <div className="navbar-end">
+        <a className="btn btn-primary mx-6">Donate</a>
+
+        
+        <div className="dropdown mx-4">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </label>
+          <ul tabIndex={0} className="menu menu-compact dropdown-content mt-4 p-3 shadow bg-base-100 rounded-box w-52">
+            <li><a>About</a></li>
+            <li tabIndex={0}>
+              <a className="justify-between">
+                Pickup Trash</a>
+            </li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+
+
+  
 
 
 
 
 
 {/* ====== Hero Section Start */}
+
 <div className="relative bg-white pt-[80px] pb-[110px] lg:pt-[120px]">
   <div className="container">
     <div className="-mx-5 flex flex-wrap">
       <div className="w-full px-4 lg:w-5/12">
-        <div className="hero-content pt-2">
+        <div className=" pt-20">
           <h1 className="mb-3 text-xl font-bold leading-snug text-dark text-center md:text-start lg:text-[50px] xl:text-[50px] text-[35px]">
             Help Keep <br /> the Public Lands<br />Clean </h1>
-          <p className="mb-8 max-w-[480px] text-base text-body-color text-center text-[20px]">
+          <p className="mb-8  text-base text-body-color text-center text-[20px]">
             Download the App.
           </p>
           <div className="-mx-3 flex flex-wrap justify-center">
@@ -38,7 +78,7 @@ export default function Home() {
                 <span className="mx-1">PlayStore</span>
               </button>
             </div>
-            <div className="w-1/2 px-3">
+            <div className="px-3">
               <button className="flex items-center px-2 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-primary rounded-md hover\:bg-opacity-90 focus:outline-none focus\:ring-2 focus:ring-primary focus:ring-opacity-80">
                 <svg xmlns="http://www.w3.org/2000/svg" height={30} width={30} viewBox="-120.015 -200 1040.13 1200"><linearGradient y2={800} x2={400} y1={0} x1={400} gradientUnits="userSpaceOnUse" id="a"><stop offset={0} stopColor="#0ed4fc" /><stop offset={1} stopColor="#0c57ef" /></linearGradient><path d="M638.4 0H161.6C72.3 0 0 72.3 0 161.6v476.9C0 727.7 72.3 800 161.6 800h476.9c89.2 0 161.6-72.3 161.6-161.6V161.6C800 72.3 727.7 0 638.4 0z" fill="url(#a)" /><path d="M396.6 183.8l16.2-28c10-17.5 32.3-23.4 49.8-13.4 17.5 10 23.4 32.3 13.4 49.8L319.9 462.4h112.9c36.6 0 57.1 43 41.2 72.8H143c-20.2 0-36.4-16.2-36.4-36.4s16.2-36.4 36.4-36.4h92.8l118.8-205.9-37.1-64.4c-10-17.5-4.1-39.6 13.4-49.8 17.5-10 39.6-4.1 49.8 13.4zM256.2 572.7l-35 60.7c-10 17.5-32.3 23.4-49.8 13.4-17.5-10-23.4-32.3-13.4-49.8l26-45c29.4-9.1 53.3-2.1 72.2 20.7zm301.4-110.1h94.7c20.2 0 36.4 16.2 36.4 36.4s-16.2 36.4-36.4 36.4h-52.6l35.5 61.6c10 17.5 4.1 39.6-13.4 49.8-17.5 10-39.6 4.1-49.8-13.4-59.8-103.7-104.7-181.3-134.5-233-30.5-52.6-8.7-105.4 12.8-123.3 23.9 41 59.6 102.9 107.3 185.5z" fill="#fff" /></svg>
                 <span className="mx-1">AppStore</span>
@@ -50,7 +90,7 @@ export default function Home() {
       <div className="hidden px-4 lg:block lg:w-1/12" />
       <div className="w-full px-4 lg:w-6/12">
         <div className="lg:ml-auto lg:text-right">
-          <div className="relative z-10 inline-block pt-11 lg:pt-0">
+          <div className="relative z-10 pt-11 lg:pt-0 flex justify-center">
             <img src="/assets/phone.png" alt="hero" className="max-w-full lg:ml-auto md:w-[350px] w-[300px] mx-[25px]"/>
             <span className="absolute -left-8 -bottom-8 z-[-1]">
               <svg width={93} height={93} viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,6 +129,7 @@ export default function Home() {
 </div>
 
 
+
 <section className="dark:bg-gray-900" style={{"background-color":"#fcd34d"}}>
   <div className="container px-4 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
     <h2 className="text-3xl font-bold tracking-tight xl:text-4xl text-dark sm:text-center ">
@@ -96,7 +137,7 @@ export default function Home() {
     </h2>
     <div className="mt-8 lg:mt-0">
       <div className="flex space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2 justify-center">
-      <button className="px-4 py-2 text-sm font-medium tracking-wide text-primary capitalize transition-colors duration-200 transform bg-white rounded-md sm:mx-2 focus:outline-none focus:bg-black focus:text-white" >
+      <button className="px-4 py-2 text-sm font-medium tracking-wide text-primary capitalize transition-colors duration-200 transform bg-white rounded-md sm:mx-2 focus:outline-none focus:bg-black">
           DONATE
         </button>
       </div>
@@ -284,6 +325,9 @@ export default function Home() {
   </div>
 </footer>
 {/* ====== Footer Section End */}
+
+
+
     </>
     )
 }
